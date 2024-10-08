@@ -1,7 +1,7 @@
 export function evaluate(inp: string) {
   const collectOperator = inp.match(/[+\-/*]/g);
   if (!collectOperator || collectOperator.length > 1) {
-    throw new Error("Wrong format");
+    return "Invalid operator";
   }
 
   const operator = collectOperator[0];
@@ -29,7 +29,7 @@ export function evaluate(inp: string) {
     default:
       throw new Error("Faulty input");
   }
-  return result;
+  return `result: ${result}`;
 }
 
 export function addition(a: number, b: number) {
