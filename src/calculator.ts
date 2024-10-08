@@ -1,3 +1,21 @@
+class Calculator {
+  addition(a: number, b: number) {
+    return a + b;
+  }
+  subtraction(a: number, b: number) {
+    return a - b;
+  }
+  multiplication(a: number, b: number) {
+    return a * b;
+  }
+  division(a: number, b: number) {
+    if (b !== 0) {
+      return a / b;
+    }
+    return "cant divide by zero";
+  }
+}
+
 export function evaluate(inp: string) {
   const collectOperator = inp.match(/[+\-/*]/g);
   if (!collectOperator || collectOperator.length > 1) {
@@ -30,20 +48,4 @@ export function evaluate(inp: string) {
       throw new Error("Faulty input");
   }
   return `result: ${result}`;
-}
-
-export function addition(a: number, b: number) {
-  return a + b;
-}
-export function subtraction(a: number, b: number) {
-  return a - b;
-}
-export function multiplication(a: number, b: number) {
-  return a * b;
-}
-export function division(a: number, b: number) {
-  if (b !== 0) {
-    return a / b; 
-  }
- return "cant divide by zero";
 }
