@@ -1,0 +1,12 @@
+{
+  "name": "infinite-loopers-jsfs-sthlm-2024-09-27-lab-jsfs-lab-calculator",
+  "version": "1.0.0",
+  "description": "Today you will be working in the Node.js environment and will setup a new project from scratch with `npm` and `git`. At the end of the day you will have a working calculator with a CLI (Command Line Interface) implementation. If you have time, you will also implement a REST API which can handle HTTP requests from a client to perform calculations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
