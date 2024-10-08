@@ -1,6 +1,6 @@
 class Greeter {
   get hello() {
-    return "HHello salt!";
+    return "Hello salt!";
   }
 }
 export default new Greeter();
