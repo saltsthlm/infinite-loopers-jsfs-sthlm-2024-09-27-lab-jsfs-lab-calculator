@@ -10,7 +10,7 @@ export function evaluate(inp: string) {
   const a = parseInt(arr[0]);
   const b = parseInt(arr[arr.length - 1]);
 
-  let result = 0;
+  let result;
 
   switch (operator) {
     case "+":
@@ -42,8 +42,8 @@ export function multiplication(a: number, b: number) {
   return a * b;
 }
 export function division(a: number, b: number) {
-  if (b === 0) {
-    console.log("cant divide by zero");
+  if (b !== 0) {
+    return a / b; 
   }
-  return a / b;
+ return "cant divide by zero";
 }

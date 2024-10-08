@@ -2,7 +2,7 @@ import { evaluate } from "./calculator";
 
 const { stdin, stdout } = process;
 
-const PROMPT = "Write something 👇";
+const PROMPT = "Calculate something: (x+-/*y) 👇";
 
 stdout.write(PROMPT);
 stdin.resume();
