@@ -4,13 +4,19 @@
   "description": "Today you will be working in the Node.js environment and will setup a new project from scratch with `npm` and `git`. At the end of the day you will have a working calculator with a CLI (Command Line Interface) implementation. If you have time, you will also implement a REST API which can handle HTTP requests from a client to perform calculations.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src/**/*.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.7.5",
-    "typescript": "^5.6.2"
+    "eslint": "^9.12.0",
+    "ts-node": "^10.9.2",
+    "typescript": "5.5.4",
+    "typescript-eslint": "^8.8.1"
   }
 }
