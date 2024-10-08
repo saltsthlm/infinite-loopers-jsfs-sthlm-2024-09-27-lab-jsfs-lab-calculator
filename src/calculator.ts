@@ -42,6 +42,8 @@ export function multiplication(a: number, b: number) {
   return a * b;
 }
 export function division(a: number, b: number) {
+  if (b === 0) {
+    console.log("cant divide by zero");
+  }
   return a / b;
 }
-
