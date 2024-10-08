@@ -4,6 +4,8 @@ const { stdin, stdout } = process;
 
 const PROMPT = "Calculate something: (x+-/*y) 👇";
 
+//tst
+
 stdout.write(PROMPT);
 stdin.resume();
 
