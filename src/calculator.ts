@@ -1,4 +1,31 @@
 class Calculator {
+  a: number;
+  b: number;
+  input: string;
+
+  constructor(a: number, b: number, input: string) {
+    this.a = a;
+    this.b = b;
+    this.input = input;
+  }
+
+  collectOperator() {
+    "placeholder"
+  }
+  get evaluate() {
+    switch (this.operator) {
+      case "+":
+        return this.addition(this.a, this.b);
+      case "-":
+        return this.subtraction(this.a, this.b);
+      case "*":
+        return this.multiplication(this.a, this.b);
+      case "/":
+        return this.division(this.a, this.b);
+      default:
+        throw new Error("Faulty input");
+    }
+  }
   addition(a: number, b: number) {
     return a + b;
   }
@@ -16,6 +43,10 @@ class Calculator {
   }
 }
 
+const calc = new Calculator(4, 5);
+
+console.log(calc.evaluate);
+
 export function evaluate(inp: string) {
   const collectOperator = inp.match(/[+\-/*]/g);
   if (!collectOperator || collectOperator.length > 1) {
@@ -29,23 +60,4 @@ export function evaluate(inp: string) {
   const b = parseInt(arr[arr.length - 1]);
 
   let result;
-
-  switch (operator) {
-    case "+":
-      result = addition(a, b);
-      break;
-    case "-":
-      result = subtraction(a, b);
-      break;
-    case "*":
-      result = multiplication(a, b);
-      break;
-    case "/":
-      result = division(a, b);
-      break;
-
-    default:
-      throw new Error("Faulty input");
-  }
-  return `result: ${result}`;
 }
