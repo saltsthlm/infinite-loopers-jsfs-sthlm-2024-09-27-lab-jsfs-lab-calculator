@@ -1,14 +1,13 @@
-import { throwDeprecation } from "process";
-
 function evaluate(inp: string) {
-  const collectOperator = inp.match(/[+-/*]/);
+  // const collectOperator = [...inp.matchAll(/[+\-/*]/g)];
+  const collectOperator = inp.match(/[+\-/*]/g);
   if (!collectOperator || collectOperator.length > 1) {
     throw new Error("Wrong format");
   }
 
   const operator = collectOperator[0];
 
-  const arr = inp.split("+", 10);
+  const arr = inp.split(operator, 10);
   const a = parseInt(arr[0]);
   const b = parseInt(arr[arr.length - 1]);
 
@@ -47,4 +46,4 @@ function division(a: number, b: number) {
   return a / b;
 }
 
-console.log(evaluate("40+50"));
+console.log(evaluate("4-2"));
