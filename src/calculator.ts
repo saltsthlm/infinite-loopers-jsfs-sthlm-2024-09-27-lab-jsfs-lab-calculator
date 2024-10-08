@@ -9,5 +9,14 @@ function evaluate(inp: string) {
 function addition(a: number, b: number) {
   return a + b;
 }
+function subtraction(a: number, b: number) {
+  return a - b;
+}
+function multiplication(a: number, b: number) {
+  return a * b;
+}
+function division(a: number, b: number) {
+  return a / b;
+}
 
 evaluate("40+50");
