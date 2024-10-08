@@ -1,3 +1,5 @@
+import { evaluate } from "./calculator";
+
 const { stdin, stdout } = process;
 
 const PROMPT = "Write something 👇";
@@ -8,7 +10,9 @@ stdin.resume();
 stdin.setEncoding("utf8");
 
 stdin.on("data", (data) => {
-  stdout.write(`echo ${data}`);
+  const dataString = data.toString();
+  const result = evaluate(dataString);
+  stdout.write(`Result: ${result}`);
   stdout.write(`\n${PROMPT}`);
 });
 

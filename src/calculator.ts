@@ -1,4 +1,4 @@
-function evaluate(inp: string) {
+export function evaluate(inp: string) {
   const collectOperator = inp.match(/[+\-/*]/g);
   if (!collectOperator || collectOperator.length > 1) {
     throw new Error("Wrong format");
@@ -45,4 +45,3 @@ export function division(a: number, b: number) {
   return a / b;
 }
 
-console.log(evaluate("4-2"));
