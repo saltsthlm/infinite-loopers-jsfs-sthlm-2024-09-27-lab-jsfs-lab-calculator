@@ -1,5 +1,4 @@
 function evaluate(inp: string) {
-  // const collectOperator = [...inp.matchAll(/[+\-/*]/g)];
   const collectOperator = inp.match(/[+\-/*]/g);
   if (!collectOperator || collectOperator.length > 1) {
     throw new Error("Wrong format");
@@ -33,16 +32,16 @@ function evaluate(inp: string) {
   return result;
 }
 
-function addition(a: number, b: number) {
+export function addition(a: number, b: number) {
   return a + b;
 }
-function subtraction(a: number, b: number) {
+export function subtraction(a: number, b: number) {
   return a - b;
 }
-function multiplication(a: number, b: number) {
+export function multiplication(a: number, b: number) {
   return a * b;
 }
-function division(a: number, b: number) {
+export function division(a: number, b: number) {
   return a / b;
 }
 

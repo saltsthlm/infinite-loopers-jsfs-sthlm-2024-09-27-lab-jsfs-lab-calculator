@@ -1,3 +1,4 @@
+import { addition, subtraction, multiplication, division } from "./calculator";
 describe("Evaluate", () => {
   it("should add numbers", () => {
     const result = addition(4, 5);
@@ -12,7 +13,7 @@ describe("Evaluate", () => {
     expect(result).toBe(20);
   });
   it("should divsion numbers", () => {
-    const result = divison(4, 2);
+    const result = division(4, 2);
     expect(result).toBe(2);
   });
 });
