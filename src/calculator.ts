@@ -1,6 +1,13 @@
-export function norm(url: string) {
-  const query = url.split("=");
-  return query; // evaluate();
+export function norm(url: string, paramName: string) {
+  const urlObj = new URL(url);
+  const paramValue = urlObj.searchParams.get(paramName);
+
+  if (paramValue) {
+    const tst = decodeURIComponent(paramValue);
+    return evaluate(tst);
+  }
+
+  return null;
 }
 
 export function evaluate(inp: string) {
