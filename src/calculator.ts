@@ -1,3 +1,8 @@
+export function norm(url: string) {
+  const query = url.split("=");
+  return query; // evaluate();
+}
+
 export function evaluate(inp: string) {
   const collectOperator = inp.match(/[+\-/*]/g);
   if (!collectOperator || collectOperator.length > 1) {
@@ -43,7 +48,7 @@ export function multiplication(a: number, b: number) {
 }
 export function division(a: number, b: number) {
   if (b !== 0) {
-    return a / b; 
+    return a / b;
   }
- return "cant divide by zero";
+  return "cant divide by zero";
 }

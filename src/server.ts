@@ -1,12 +1,15 @@
 import http from "http";
-import greeter from "./greeter";
+import { evaluate, addition, norm } from "./calculator";
 
 const port = 8080;
 
 const server = http
   .createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end(greeter.hello);
+    if (req.url) {
+      console.log(norm(req.url));
+    }
+    res.end();
   })
   .listen(port);
 
